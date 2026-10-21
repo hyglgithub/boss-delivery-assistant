@@ -1,6 +1,7 @@
 versions/
 *.py
 *.html
+!docs/**/*.html
 _build*
 *.txt
 node_modules/

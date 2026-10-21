@@ -174,6 +174,14 @@ v2.2.0 因为写死 `.job-detail-box` 这组 class，线上全部落空、48 个
 这是唯一会静默丢用户数据的地方：合并结果必须**先落盘再删 `promptVars` 键**，
 且 v2.2.x 回落路径必须用 `PROMPT_SECTIONS_LEGACY`。
 
+## 官网与文档
+
+`docs/index.html` 是项目官网，纯静态 HTML + 内联 CSS，没有构建步骤；GitHub Pages
+使用 `main` 分支的 `/docs` 目录发布，地址是
+`https://hyglgithub.github.io/boss-delivery-assistant/`。站内图片在 `docs/assets/`，
+README 与官网共用同一张截图。`.gitignore` 里的 `*.html` 会忽略站点文件，
+已用 `!docs/**/*.html` 放行；新增 HTML 页面时注意不要被忽略。
+
 ## 构建产物与提交
 
 改动源码后**必须** `npm run build` 并提交更新后的 `boss-quick-apply.user.js`。
