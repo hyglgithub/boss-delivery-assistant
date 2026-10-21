@@ -65,7 +65,7 @@ export const CONFIG = {
   },
 
   // 聊天页「自动轮询」= 一次单向全量遍历：从 chatStore.friends 的第一条到底部，
-  // 每条会话打开一次，到尾部自动停止（见 zhipin-chat-probe.md）。
+  // 每条会话打开一次，到尾部自动停止（来自实机探测）。
   // 每次调用最多连续打开 MAX_SWEEP_PER_CALL 个，之间停 SWEEP_DELAY；
   // 两次调用之间停 POLL_INTERVAL，避免把 BOSS 的接口打得太密。
   CHAT: {

@@ -166,7 +166,7 @@ npm run deps
 10. **配置变更一律走 `saveSettings()`**。`StatePersistence` 现在只有 `loadState()`，
     没有运行时的全量 `saveState()`。新增任何修改 `settings.*` 的代码，记得自己落盘。
 11. **聊天页「自动轮询」是一次单向全量遍历，数据源是页面全局 `chatStore`**。
-    列表 DOM 没有稳定 id（见 `zhipin-chat-probe.md`）；
+    列表 DOM 没有稳定 id（来自实机探测）；
     `window.chatStore.friendInfos` 才有 `uid` / `encryptBossId` / `lastTS` 等字段。
     Tampermonkey 沙箱下要经 `unsafeWindow`（退化到 `document.defaultView`）
     读取。启动时按 `chatStore.friends` 的顺序做一次快照，然后**从第一条到底部逐条打开，

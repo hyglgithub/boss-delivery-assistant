@@ -6,7 +6,13 @@
 
 > BOSS直聘高效投递工具：AI 智能判断岗位 + 批量投递 + 提示词可自定义
 >
-> **作者：wok** ｜ **当前版本：v2.4.0** ｜ [更新日志](CHANGELOG.md) ｜ [Bug 修复报告](BUGFIX-REPORT.md)
+> **作者：wok** ｜ **当前版本：v2.4.0** ｜ [下载最新版本](https://github.com/hyglgithub/boss-delivery-assistant/releases/latest) ｜ [更新日志](CHANGELOG.md)
+
+<p align="center">
+  <img src="assets/panel-preview.png" width="900" alt="BOSS投递助手面板预览">
+</p>
+
+<p align="center"><sub>左：聊天页自动轮询　右：职位页批量投递</sub></p>
 
 ## 功能
 
@@ -22,6 +28,11 @@
 - 🔁 **聊天页自动轮询** — 从会话列表第一条开始，逐条打开处理，到最后一条自动停止；
   不再只看顶部一条
 - 📊 **运行统计** — 岗位列表页实时显示已沟通 / 已跳过 / 失败
+
+## 下载
+
+前往 [Releases](https://github.com/hyglgithub/boss-delivery-assistant/releases/latest) 下载最新版压缩包，
+内含脚本、图标和使用说明书；也可以直接使用仓库根目录的 `boss-quick-apply.user.js`。
 
 ## 安装
 
@@ -98,15 +109,8 @@
   - **打开会话即标为已读**；只有「最后一条我方消息 == 打招呼列表第 1 行」的会话
     才会收到第 2 行及以后的后续消息（首次沟通没有开关；不一致的不发也不记账）。
 
-> 自动轮询依赖页面全局 `chatStore`；
-> 拿不到时会自动回退成「只看顶部会话」。
-> 实机结构见 [`zhipin-chat-probe.md`](zhipin-chat-probe.md)，
-> 执行细节见 [`CHAT-ASSISTANT-LOGIC.md`](CHAT-ASSISTANT-LOGIC.md)。
-
-> 身份判据已从「名字-公司」升级为 BOSS 的稳定 `uid`，旧账本仍兼容。
 > 自动轮询依赖页面全局 `chatStore`；拿不到时会自动回退成「只看顶部会话」。
-> 实机结构见 [`zhipin-chat-probe.md`](zhipin-chat-probe.md)，
-> 执行细节见 [`CHAT-ASSISTANT-LOGIC.md`](CHAT-ASSISTANT-LOGIC.md)。
+> 身份判据已从「名字-公司」升级为 BOSS 的稳定 `uid`，旧账本仍兼容。
 
 ## 常见问题
 

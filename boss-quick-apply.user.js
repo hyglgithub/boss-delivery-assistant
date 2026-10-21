@@ -61,7 +61,7 @@
       RETRY_DELAY: 1e3
     },
     // 聊天页「自动轮询」= 一次单向全量遍历：从 chatStore.friends 的第一条到底部，
-    // 每条会话打开一次，到尾部自动停止（见 zhipin-chat-probe.md）。
+    // 每条会话打开一次，到尾部自动停止（来自实机探测）。
     // 每次调用最多连续打开 MAX_SWEEP_PER_CALL 个，之间停 SWEEP_DELAY；
     // 两次调用之间停 POLL_INTERVAL，避免把 BOSS 的接口打得太密。
     CHAT: {
@@ -3871,7 +3871,7 @@
     /* =====================================================================
      * 自动轮询：扫描会话列表（chatStore），而不是只盯顶部一条
      *
-     * 实机探测（zhipin-chat-probe.md）结论：
+     * 实机探测结论：
      *   - 会话列表 DOM 没有稳定 id；
      *   - window.chatStore.friendInfos 有 uid / encryptBossId / lastTS 等字段；
      *   - 一次运行按列表顺序从第一条到底部逐条打开，每条只走一次，到尾部停止；

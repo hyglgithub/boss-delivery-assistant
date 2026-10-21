@@ -1060,7 +1060,7 @@ export const Core = {
   /* =====================================================================
    * 自动轮询：扫描会话列表（chatStore），而不是只盯顶部一条
    *
-   * 实机探测（zhipin-chat-probe.md）结论：
+   * 实机探测结论：
    *   - 会话列表 DOM 没有稳定 id；
    *   - window.chatStore.friendInfos 有 uid / encryptBossId / lastTS 等字段；
    *   - 一次运行按列表顺序从第一条到底部逐条打开，每条只走一次，到尾部停止；

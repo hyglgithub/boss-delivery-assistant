@@ -160,7 +160,7 @@ const FIXTURE = `<!DOCTYPE html>
     });
   });
 
-  // 来自 zhipin-chat-probe.md 的字段子集（脱敏）
+  // 来自实机探测的字段子集（脱敏）
   window.chatStore = {
     friends: [1001, 1002, 1003],
     friendInfos: {
