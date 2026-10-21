@@ -1,0 +1,4 @@
+# 统一以 LF 存储与检出，避免 Windows(core.autocrlf=true) 下反复出现
+# "LF will be replaced by CRLF" 提示，也让格式化 diff 保持干净。
+*.js text eol=lf
+*.md text eol=lf

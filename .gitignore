@@ -1,0 +1,6 @@
+versions/
+*.py
+*.html
+_build*
+*.txt
+node_modules/

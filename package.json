@@ -1,0 +1,24 @@
+{
+  "name": "boss-delivery-assistant",
+  "version": "2.4.0",
+  "private": true,
+  "description": "BOSS投递助手 — 源码在 src/，构建产物为根目录 boss-quick-apply.user.js",
+  "scripts": {
+    "build": "node build.js",
+    "check": "node build.js && node --check boss-quick-apply.user.js",
+    "format": "prettier --write src build.js \"tools/**/*.js\" \"test/**/*.js\"",
+    "format:check": "prettier --check src build.js \"tools/**/*.js\" \"test/**/*.js\"",
+    "test": "node test/smoke.test.js && node test/apply-flow.test.js && node test/settings-prompt.test.js && node test/chat-greeting.test.js && node test/chat-auto-poll.test.js",
+    "test:flow": "node test/apply-flow.test.js",
+    "test:settings": "node test/settings-prompt.test.js",
+    "test:chat": "node test/chat-greeting.test.js && node test/chat-auto-poll.test.js",
+    "deps": "node tools/dep-graph.js",
+    "verify": "node tools/behavior-diff.js"
+  },
+  "devDependencies": {
+    "acorn": "^8.14.0",
+    "esbuild": "^0.28.2",
+    "playwright": "^1.63.0",
+    "prettier": "^3.9.8"
+  }
+}
