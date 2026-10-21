@@ -4,3 +4,4 @@ versions/
 _build*
 *.txt
 node_modules/
+release/
